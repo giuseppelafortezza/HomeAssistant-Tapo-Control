@@ -978,6 +978,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
             LOGGER,
             name="Tapo resource status",
             update_method=async_update_data,
+            update_interval=timedelta(seconds=updateIntervalMain),
         )
 
         LOGGER.debug("Retrieving initial device data.")
